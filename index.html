@@ -35,6 +35,20 @@
     <div class="js-weather weather">
         <span class="weather__text"></span>
     </div>
+
+    <div class="wrapper">
+        <div class = "user-container">
+            <label for="nickname"></label>
+            대화명 : <input type="text" id="nickname">
+        </div>
+        <div class = "display-container">
+            <ul class = "chatting-list"></ul>
+        </div>
+        <div class = "input-container">
+            <input type="text" class="chatting-input">
+            <button class="send-button">전송</button>
+        </div>
+    </div>
     <script  src="js/jquery-3.6.0.min.js"></script>
     <script src="js/background.js"></script>
     <script src="js/clock.js"></script>
@@ -44,6 +58,9 @@
     <script src="js/quotes.js"></script>
     <script src="js/delete.js"></script>
     <script src="js/gotomap.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+    
 </body>
 
 </html>
