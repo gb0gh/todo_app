@@ -1,2 +1,3 @@
-# todo_app
-todo_app
+# Javascript For Beginners
+
+Learning Javascript by Making a Productivity App
