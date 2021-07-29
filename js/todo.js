@@ -54,8 +54,8 @@ function loadToDos() {
       addToDo(toDo.value);
     });
   } else {
-    //todo리스트가 없는경우
-    //console창의 에러가 뜸 그걸 방지용
+    //localStorage의 todos가 없는경우
+    //콘솔창에 에러가 찍힘 방법을 생각
   };
   return;
 }
