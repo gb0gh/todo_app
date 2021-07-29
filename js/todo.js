@@ -53,7 +53,10 @@ function loadToDos() {
     parsedToDos.forEach(function(toDo) {
       addToDo(toDo.value);
     });
-  }
+  } else {
+    //todo리스트가 없는경우
+    //console창의 에러가 뜸 그걸 방지용
+  };
   return;
 }
 
@@ -63,7 +66,6 @@ function init() {
 
 form.on("submit", function(e) {
   e.preventDefault();
-  console.log( $('#add_todo').val());
   addToDo( $('#add_todo').val());
   $('#add_todo').val("");
 });

@@ -4,8 +4,7 @@ function getQuotes(){
     fetch(QUOTES_URL)
       .then(response => response.json())
       .then(json => {
-        const quotes = json.slip.advice
-        console.log(typeof(quotes));
+        const quotes = json.slip.advice;
         quotes_list.text(quotes);
       })
 }

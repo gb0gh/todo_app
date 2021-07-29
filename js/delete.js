@@ -10,7 +10,6 @@ function addDeleteBtn(){
 }
 
 function allDelete(){
-  alert("경고문");
     $('.toDo').remove();
     persistDelete();
 }
@@ -21,7 +20,6 @@ function initDeleteBtn(){
 
 function persistDelete() {
   const stringToDo = JSON.stringify(toDos);
-  alert(stringToDo);
   localStorage.setItem("toDos", "");
 }
 
