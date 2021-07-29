@@ -1,5 +1,4 @@
 const nameContainer = $(".js-name");
-
 function paintName(name) {
   nameContainer.text("");
   const title = document.createElement("span");

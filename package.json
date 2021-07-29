@@ -1,0 +1,25 @@
+{
+  "name": "todo_app",
+  "version": "1.0.0",
+  "description": "Learning Javascript by Making a Productivity App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gb0gh/todo_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gb0gh/todo_app/issues"
+  },
+  "homepage": "https://github.com/gb0gh/todo_app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "socket.io": "^4.1.3"
+  }
+}
