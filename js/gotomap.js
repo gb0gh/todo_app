@@ -1,8 +1,8 @@
 const gotomap = $('.gotomap').text();
 const word = gotomap.split(',');
-const search_word = (word.join('+'));
+const place = word[0];
 
 $('.gotomap').click(function(){
-    const tap = window.open('https://www.google.co.kr/maps/place/'+search_word, '_blank');
+    const tap = window.open('https://www.google.co.kr/maps/search/'+ place, '_blank');
     tap.focus();
 });
