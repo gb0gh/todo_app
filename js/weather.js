@@ -43,7 +43,6 @@ function loadWeather() {
     navigator.geolocation.watchPosition(//getCurrent 위치고정?
       handleGeoSuccess,                 //watchPosition 위치가 바뀔때마다.
       handleGeoFailure,
-      enableHighAccuracy
     );
   }
 }
