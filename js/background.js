@@ -18,8 +18,10 @@ function loadBackground() {
       body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(${
         parsedImage.url
       })`;
+      if(parsedImage.name != 'null'){
       locationContainer.append('<a class="gotomap">'+parsedImage.name+'</a>');
-      //locationContainer.text('<a>'+parsedImage.name+'</a>');//이미지 네임만
+      //locationContainer.text('<a>'+parsedImage.name+'</a>');//이미지 네임만 null은 안보이게처리
+      }
     }
   }
   return;
