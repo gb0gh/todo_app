@@ -69,3 +69,10 @@ ul {
 ul {
   margin-top: 3%;
 }
+
+.open_Chat {
+  position: fixed;
+  display: block;
+  bottom: 2%;
+  right: 2%;
+}

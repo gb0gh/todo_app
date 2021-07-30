@@ -13,6 +13,11 @@ const PORT = process.env.PORT || 5000;
 
 
 io.on("connection",(socket) =>{
+
+    const req = socket.request;
+    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    console.log('새로운 클라이언트 접속!', ip, socket.id);
+    
         socket.on("chatting", (data) => {
             const {name , msg} = data;
             io.emit("chatting", {
