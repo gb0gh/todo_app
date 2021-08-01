@@ -1,22 +1,24 @@
 "use strict"
-const getLink = window.location.search;
-const getUserName = getLink.split('=');
-const nickname = decodeURI(getUserName[1]);
+
+
 const chatList = $('.chatting-list');
-const chatInput = $('.chatting-input');
-const sendButton = $('.send-button');
+const chatInput = $('#chat-input');
 
 const socket = io();
-
-sendButton.on("click", () =>{
+   
+chatInput.keypress(function(e){
+    let nickname = $('.js-name').text().split('Hello')[1];
     const data = {
         name : nickname,
         msg : chatInput.val()
     }
-    console.log(0);
+    console.log(chatInput.val());
     console.log(data);
-    socket.emit("chatting", data);
-
+    if (e.keyCode == 13){
+        socket.emit("chatting", data);
+        chatInput.val("");
+    }
+    
 });
 
 console.log(socket);
@@ -24,25 +26,33 @@ console.log(socket);
 
 socket.on("chatting", data =>{
     const li = document.createElement("li");
+    const messageText = document.createElement("div");
+    let nickname = $('.js-name').text().split('Hello')[1];
+
     if(data.name == nickname){
-        li.className = "message sag mtLine";//보낸거
+        li.className = "chat-msg self";//보낸거
+        messageText.className = 'messageText self';
     } else {
-        li.className = "message sol mtLine";//받는거
+        li.className = "chat-msg user";//받는거
+        messageText.className = 'messageText user';
     }
 
     const resim = document.createElement("div");
-    resim.className = "resim"
-    resim.innerText = data.name + ' : ' + data.msg
+    resim.className = "cm-msg-text"
+    resim.innerText = data.name + ' : ' + data.msg;
     
-    const messageText = document.createElement("div");
-    messageText.className = 'messageText';
-    messageText.setAttribute('data-Time', data.time);
+    
+    
+    messageText.innerText = data.time;
     
     li.append(messageText)
     li.append(resim);
     
     chatList.append(li);
     
+    $(".chat-logs").stop().animate({ 
+        scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
+
     console.log(1);
     console.log(data);
 });
