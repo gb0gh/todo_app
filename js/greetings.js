@@ -5,6 +5,21 @@ function paintName(name) {
   title.className = "name__text";
   title.innerHTML = `Hello ${name}`;
   nameContainer.append(title);
+  // open chat
+  if(!name){
+    }else{
+      const log = `Hello ${name}`;
+      console.log(log);
+      $("#chat-circle").click(function() {    
+      $("#chat-circle").toggle('scale');
+      $(".chat-box").toggle('scale');
+    })
+    
+      $(".chat-box-toggle").click(function() {
+      $("#chat-circle").toggle('scale');
+      $(".chat-box").toggle('scale');
+    })
+  }
 }
 
 function handleSubmit(event) {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=Chrome">
     <title>ToDo_app</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <script>
@@ -35,9 +36,36 @@
         <span class="weather__text"></span>
     </div>
 
-    <button class="open_Chat">open Chat</button>
+    <!-- 모달? 새창? 몰로하지? -->
+    <div id="chat-circle" class="btn btn-raised center">
+        <div id="chat-overlay"></div>
+        <div id="icon" class="material-icons">speaker_phone</div>
+  
+	</div>
 
     
+
+    <div class="chat-box">
+        <div class="chat-box-header">
+          ChatBot
+          <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+        </div>
+        <div class="chat-box-body">
+          <div class="chat-box-overlay">   
+          </div>
+          <div class="chat-logs">
+            <div class = "display-container">
+                <ul class = "chatting-list"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="chat-input">      
+            <input type="text" id="chat-input" placeholder="Send a message...">
+        </div>
+      </div>
+
+
+
     <script  src="js/jquery-3.6.0.min.js"></script>
     <script src="js/background.js"></script>
     <script src="js/clock.js"></script>
@@ -48,6 +76,8 @@
     <script src="js/delete.js"></script>
     <script src="js/gotomap.js"></script>
     <script src="js/openchat.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
 </body>
 
 </html>

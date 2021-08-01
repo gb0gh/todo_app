@@ -2,10 +2,9 @@ const UNSPLASH_API_KEY =
   "37I-4astF_ITqjkspEjjsNwR04vlcXSQWJ6i26R2iW8";
 const UNSPLASH_URL = `https://api.unsplash.com/photos/random/?client_id=${UNSPLASH_API_KEY}&query=landscape&orientation=landscape`;
 
-const body = document.querySelector("body");
-const locationContainer = $(".js-location span");
-
 function loadBackground() {
+  const body = document.querySelector("body");
+  const locationContainer = $(".js-location span");
   const savedImage = localStorage.getItem("bg");
   if (savedImage === null) {
     getBackground();
@@ -71,8 +70,6 @@ function initApp() {
 }
 
 initApp();
-
-
 
 //bgimage.src = 'https://source.unsplash.com/category/nature/'
 //document.body.appendChild(bgimage);

@@ -25,7 +25,7 @@ function handleGeoSuccess(position) {
     lat,
     lng
   };
-  localStorage.setItem("coords", JSON.stringify(coords));
+  //localStorage.setItem("coords", JSON.stringify(coords));
   getWeather(coords);
 }
 
