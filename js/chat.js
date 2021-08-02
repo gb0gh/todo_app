@@ -56,4 +56,3 @@ socket.on("chatting", data =>{
     console.log(1);
     console.log(data);
 });
-//sol이 받는거 sag가 보낸거
