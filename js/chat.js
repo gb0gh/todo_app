@@ -52,7 +52,4 @@ socket.on("chatting", data =>{
     
     $(".chat-logs").stop().animate({ 
         scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
-
-    console.log(1);
-    console.log(data);
 });
