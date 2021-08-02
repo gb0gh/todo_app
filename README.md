@@ -7,3 +7,5 @@ Restful api를 이용하여
 Url을 타고 구글맵을 열어 background배경의 위치를 검색
 
 node.js, socket.io 사용 자바스크립트로 채팅구현
+
+node js/app.js로 실행 포트번호 5000
