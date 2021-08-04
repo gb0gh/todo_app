@@ -4,6 +4,7 @@ const WEATHER_API = "https://api.openweathermap.org/data/2.5/weather?";
 const weather = $(".js-weather .weather__text");
 
 function getWeather(coords) {
+  console.log(`${WEATHER_API}lat=${coords.lat}&lon=${coords.lng}&appid=${API_KEY}&units=metric`);
   fetch(
     `${WEATHER_API}lat=${coords.lat}&lon=${
       coords.lng
